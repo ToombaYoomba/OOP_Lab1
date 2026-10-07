@@ -1,2 +1,0 @@
-C:\Zakhar\Programs\msys64\ucrt64\bin\ar.exe qc liblab01_lib.a CMakeFiles/lab01_lib.dir/src/funcs.cpp.obj
-C:\Zakhar\Programs\msys64\ucrt64\bin\ranlib.exe liblab01_lib.a
