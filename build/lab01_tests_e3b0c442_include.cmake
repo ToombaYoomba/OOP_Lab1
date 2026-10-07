@@ -1,0 +1,5 @@
+if(EXISTS "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/lab01_tests_e3b0c442_tests.cmake")
+  include("C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/lab01_tests_e3b0c442_tests.cmake")
+else()
+  add_test(lab01_tests_NOT_BUILT lab01_tests_NOT_BUILT)
+endif()

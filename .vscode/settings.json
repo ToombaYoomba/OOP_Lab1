@@ -1,0 +1,4 @@
+{
+    "cmake.generator": "MinGW Makefiles",
+    "cmake.makeProgram": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\mingw32-make.exe"
+}
