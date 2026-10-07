@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/src/funcs.cpp" "CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj" "gcc" "CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj.d"
   "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/tests/tests_funcs.cpp" "CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj" "gcc" "CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj.d"
   )
 

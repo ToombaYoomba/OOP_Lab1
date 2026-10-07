@@ -62,13 +62,13 @@ CMAKE_BINARY_DIR = C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lab01_lib.dir/all
+all: CMakeFiles/lab01_app.dir/all
 all: CMakeFiles/lab01_tests.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/lab01_lib.dir/codegen
+codegen: CMakeFiles/lab01_app.dir/codegen
 codegen: CMakeFiles/lab01_tests.dir/codegen
 codegen: _deps/googletest-build/codegen
 .PHONY : codegen
@@ -78,7 +78,7 @@ preinstall: _deps/googletest-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lab01_lib.dir/clean
+clean: CMakeFiles/lab01_app.dir/clean
 clean: CMakeFiles/lab01_tests.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
@@ -150,52 +150,51 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 .PHONY : _deps/googletest-build/googletest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab01_lib.dir
+# Target rules for target CMakeFiles/lab01_app.dir
 
 # All Build rule for target.
-CMakeFiles/lab01_lib.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=9,10 "Built target lab01_lib"
-.PHONY : CMakeFiles/lab01_lib.dir/all
+CMakeFiles/lab01_app.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=9,10,11 "Built target lab01_app"
+.PHONY : CMakeFiles/lab01_app.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lab01_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/lab01_lib.dir/all
+CMakeFiles/lab01_app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/lab01_app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 0
-.PHONY : CMakeFiles/lab01_lib.dir/rule
+.PHONY : CMakeFiles/lab01_app.dir/rule
 
 # Convenience name for target.
-lab01_lib: CMakeFiles/lab01_lib.dir/rule
-.PHONY : lab01_lib
+lab01_app: CMakeFiles/lab01_app.dir/rule
+.PHONY : lab01_app
 
 # codegen rule for target.
-CMakeFiles/lab01_lib.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=9,10 "Finished codegen for target lab01_lib"
-.PHONY : CMakeFiles/lab01_lib.dir/codegen
+CMakeFiles/lab01_app.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=9,10,11 "Finished codegen for target lab01_app"
+.PHONY : CMakeFiles/lab01_app.dir/codegen
 
 # clean rule for target.
-CMakeFiles/lab01_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/clean
-.PHONY : CMakeFiles/lab01_lib.dir/clean
+CMakeFiles/lab01_app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/clean
+.PHONY : CMakeFiles/lab01_app.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/lab01_tests.dir
 
 # All Build rule for target.
-CMakeFiles/lab01_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/lab01_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/lab01_tests.dir/all: CMakeFiles/lab01_lib.dir/all
+CMakeFiles/lab01_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=11,12 "Built target lab01_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=12,13,14 "Built target lab01_tests"
 .PHONY : CMakeFiles/lab01_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lab01_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/lab01_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles 0
 .PHONY : CMakeFiles/lab01_tests.dir/rule
@@ -207,7 +206,7 @@ lab01_tests: CMakeFiles/lab01_tests.dir/rule
 # codegen rule for target.
 CMakeFiles/lab01_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=11,12 "Finished codegen for target lab01_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=12,13,14 "Finished codegen for target lab01_tests"
 .PHONY : CMakeFiles/lab01_tests.dir/codegen
 
 # clean rule for target.

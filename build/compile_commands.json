@@ -1,15 +1,27 @@
 [
 {
   "directory": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build",
-  "command": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\lab01_lib.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\lab01_lib.dir\\src\\funcs.cpp.obj -c C:\\Zakhar\\MAI_Labs\\OOP_Labs\\OOP_Lab1\\src\\funcs.cpp",
+  "command": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\lab01_app.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\lab01_app.dir\\main.cpp.obj -c C:\\Zakhar\\MAI_Labs\\OOP_Labs\\OOP_Lab1\\main.cpp",
+  "file": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/main.cpp",
+  "output": "CMakeFiles/lab01_app.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build",
+  "command": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\lab01_app.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\lab01_app.dir\\src\\funcs.cpp.obj -c C:\\Zakhar\\MAI_Labs\\OOP_Labs\\OOP_Lab1\\src\\funcs.cpp",
   "file": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/src/funcs.cpp",
-  "output": "CMakeFiles/lab01_lib.dir/src/funcs.cpp.obj"
+  "output": "CMakeFiles/lab01_app.dir/src/funcs.cpp.obj"
 },
 {
   "directory": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build",
   "command": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\lab01_tests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\lab01_tests.dir\\tests\\tests_funcs.cpp.obj -c C:\\Zakhar\\MAI_Labs\\OOP_Labs\\OOP_Lab1\\tests\\tests_funcs.cpp",
   "file": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/tests/tests_funcs.cpp",
   "output": "CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj"
+},
+{
+  "directory": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build",
+  "command": "C:\\Zakhar\\Programs\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\lab01_tests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\lab01_tests.dir\\src\\funcs.cpp.obj -c C:\\Zakhar\\MAI_Labs\\OOP_Labs\\OOP_Lab1\\src\\funcs.cpp",
+  "file": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/src/funcs.cpp",
+  "output": "CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj"
 },
 {
   "directory": "C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/_deps/googletest-build/googlemock",

@@ -171,17 +171,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab01_lib
+# Target rules for targets named lab01_app
 
 # Build rule for target.
-lab01_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab01_lib
-.PHONY : lab01_lib
+lab01_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab01_app
+.PHONY : lab01_app
 
 # fast build rule for target.
-lab01_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/build
-.PHONY : lab01_lib/fast
+lab01_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/build
+.PHONY : lab01_app/fast
 
 #=============================================================================
 # Target rules for targets named lab01_tests
@@ -248,12 +248,37 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+main.obj: main.cpp.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 src/funcs.obj: src/funcs.cpp.obj
 .PHONY : src/funcs.obj
 
 # target to build an object file
 src/funcs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/src/funcs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/src/funcs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj
 .PHONY : src/funcs.cpp.obj
 
 src/funcs.i: src/funcs.cpp.i
@@ -261,7 +286,8 @@ src/funcs.i: src/funcs.cpp.i
 
 # target to preprocess a source file
 src/funcs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/src/funcs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/src/funcs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/src/funcs.cpp.i
 .PHONY : src/funcs.cpp.i
 
 src/funcs.s: src/funcs.cpp.s
@@ -269,7 +295,8 @@ src/funcs.s: src/funcs.cpp.s
 
 # target to generate assembly for a file
 src/funcs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_lib.dir\build.make CMakeFiles/lab01_lib.dir/src/funcs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_app.dir\build.make CMakeFiles/lab01_app.dir/src/funcs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab01_tests.dir\build.make CMakeFiles/lab01_tests.dir/src/funcs.cpp.s
 .PHONY : src/funcs.cpp.s
 
 tests/tests_funcs.obj: tests/tests_funcs.cpp.obj
@@ -313,8 +340,11 @@ help:
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... lab01_lib
+	@echo ... lab01_app
 	@echo ... lab01_tests
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... src/funcs.obj
 	@echo ... src/funcs.i
 	@echo ... src/funcs.s

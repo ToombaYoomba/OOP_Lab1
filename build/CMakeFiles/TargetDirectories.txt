@@ -1,4 +1,4 @@
-C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/CMakeFiles/lab01_lib.dir
+C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/CMakeFiles/lab01_app.dir
 C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/CMakeFiles/lab01_tests.dir
 C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/CMakeFiles/test.dir
 C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/CMakeFiles/edit_cache.dir

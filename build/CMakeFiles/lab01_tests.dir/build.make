@@ -86,23 +86,39 @@ CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.s"
 	C:\Zakhar\Programs\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\tests\tests_funcs.cpp -o CMakeFiles\lab01_tests.dir\tests\tests_funcs.cpp.s
 
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj: CMakeFiles/lab01_tests.dir/flags.make
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj: CMakeFiles/lab01_tests.dir/includes_CXX.rsp
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj: C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/src/funcs.cpp
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj: CMakeFiles/lab01_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj"
+	C:\Zakhar\Programs\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj -MF CMakeFiles\lab01_tests.dir\src\funcs.cpp.obj.d -o CMakeFiles\lab01_tests.dir\src\funcs.cpp.obj -c C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\src\funcs.cpp
+
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab01_tests.dir/src/funcs.cpp.i"
+	C:\Zakhar\Programs\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\src\funcs.cpp > CMakeFiles\lab01_tests.dir\src\funcs.cpp.i
+
+CMakeFiles/lab01_tests.dir/src/funcs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab01_tests.dir/src/funcs.cpp.s"
+	C:\Zakhar\Programs\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\src\funcs.cpp -o CMakeFiles\lab01_tests.dir\src\funcs.cpp.s
+
 # Object files for target lab01_tests
 lab01_tests_OBJECTS = \
-"CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj"
+"CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj" \
+"CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj"
 
 # External object files for target lab01_tests
 lab01_tests_EXTERNAL_OBJECTS =
 
 lab01_tests.exe: CMakeFiles/lab01_tests.dir/tests/tests_funcs.cpp.obj
+lab01_tests.exe: CMakeFiles/lab01_tests.dir/src/funcs.cpp.obj
 lab01_tests.exe: CMakeFiles/lab01_tests.dir/build.make
-lab01_tests.exe: liblab01_lib.a
 lab01_tests.exe: lib/libgtest.a
 lab01_tests.exe: lib/libgtest_main.a
 lab01_tests.exe: lib/libgtest.a
 lab01_tests.exe: CMakeFiles/lab01_tests.dir/linkLibs.rsp
 lab01_tests.exe: CMakeFiles/lab01_tests.dir/objects1.rsp
 lab01_tests.exe: CMakeFiles/lab01_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab01_tests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Zakhar\MAI_Labs\OOP_Labs\OOP_Lab1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab01_tests.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab01_tests.dir\link.txt --verbose=$(VERBOSE)
 	C:\Zakhar\Programs\CMake\bin\cmake.exe -P C:/Zakhar/MAI_Labs/OOP_Labs/OOP_Lab1/build/lab01_tests_e3b0c442_discovery.cmake -- 
 

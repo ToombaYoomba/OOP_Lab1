@@ -18,6 +18,7 @@ void matrix_delete(int** m, std::size_t rows){
     }
 
     delete[] m;
+    m = nullptr;
 }
 
 void matrix_fill(int** m, std::size_t rows, std::size_t cols, int value){

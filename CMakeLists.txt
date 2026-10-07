@@ -12,11 +12,14 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_library(lab01_lib STATIC src/funcs.cpp)
-target_include_directories(lab01_lib PUBLIC src)
+# --- приложение с меню ---
+add_executable(lab01_app main.cpp src/funcs.cpp)
+target_include_directories(lab01_app PRIVATE src)
 
-add_executable(lab01_tests tests/tests_funcs.cpp)
-target_link_libraries(lab01_tests PRIVATE lab01_lib GTest::gtest GTest::gtest_main)
+# --- тесты ---
+add_executable(lab01_tests tests/tests_funcs.cpp src/funcs.cpp)
+target_include_directories(lab01_tests PRIVATE src)
+target_link_libraries(lab01_tests PRIVATE GTest::gtest GTest::gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(lab01_tests)
