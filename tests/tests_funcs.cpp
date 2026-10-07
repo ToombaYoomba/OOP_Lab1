@@ -26,18 +26,20 @@ TEST(FuncsTest, CreateMatrixCheckNullptr){
     matrix_delete(m, rows);
 }
 
+TEST(FuncsTest, CreateOneMatrixCheckForValue){
+    std::size_t rows = 1, cols = 1;
+
+    int** m = matrix_create(rows, cols);
+
+    EXPECT_EQ(m[0][0], 0);
+}
+
 TEST(FuncsTest, CreateZeroMatrixCheckNullptr){
     std::size_t rows = 0, cols = 0;
 
     int** m = matrix_create(rows, cols);
 
-    EXPECT_NE(m, nullptr);
-
-    for (std::size_t i = 0; i < rows; i++){
-        EXPECT_NE(m[i], nullptr);
-    }
-
-    matrix_delete(m, rows);
+    EXPECT_EQ(m, nullptr);
 }
 
 TEST(FuncsTest, MatrixFillWithNumber){
@@ -53,6 +55,30 @@ TEST(FuncsTest, MatrixFillWithNumber){
     }
 
     matrix_delete(m, rows);
+}
+
+TEST(FuncsTest, MatrixFillNullptr){
+    matrix_fill(nullptr, 4, 4, 5);
+    SUCCEED();
+}
+
+TEST(FuncsTest, PrintNonEmpty){
+    int** m = matrix_create(2, 2);
+    m[0][0] = 1; m[0][1] = 2;
+    m[1][0] = 3; m[1][1] = 4;
+    testing::internal::CaptureStdout();
+    matrix_print(m, 2, 2);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_NE(output.find("1"), std::string::npos);
+    EXPECT_NE(output.find("4"), std::string::npos);
+    matrix_delete(m, 2);
+}
+
+TEST(FuncsTest, PrintNullptr){
+    testing::internal::CaptureStdout();
+    matrix_print(nullptr, 0, 0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_NE(output.find("empty"), std::string::npos);
 }
 
 TEST(FuncsTest, MatrixSpiralReadRegular){

@@ -2,17 +2,29 @@
 #include <iostream>
 
 
-int** matrix_create(std::size_t rows, std::size_t cols){
-    int** m = new int*[rows];
+void matrix_fill(int** m, std::size_t rows, std::size_t cols, int value){
+    if (m == nullptr) return;
 
+    for (std::size_t i=0; i < rows; i++){
+        for (std::size_t j=0; j < cols; j++){
+            m[i][j] = value;
+        }
+    }
+}
+
+int** matrix_create(std::size_t rows, std::size_t cols){
+    if (rows == 0u || cols == 0u) return nullptr;
+
+    int** m = new int*[rows];
     for (std::size_t i=0; i < rows; i++){
         m[i] = new int[cols];
     }
+    matrix_fill(m, rows, cols, 0);
 
     return m;
 }
 
-void matrix_delete(int** m, std::size_t rows){
+void matrix_delete(int**& m, std::size_t rows){
     for (std::size_t i = 0; i < rows; i++){
         delete[] m[i];
     }
@@ -21,15 +33,11 @@ void matrix_delete(int** m, std::size_t rows){
     m = nullptr;
 }
 
-void matrix_fill(int** m, std::size_t rows, std::size_t cols, int value){
-    for (std::size_t i=0; i < rows; i++){
-        for (std::size_t j=0; j < cols; j++){
-            m[i][j] = value;
-        }
-    }
-}
-
 void matrix_print(const int* const* m, std::size_t rows, std::size_t cols){
+    if (m == nullptr){
+        std::cout << "empty" << std::endl;
+        return;
+    } 
     std::cout << "[";
     for (std::size_t i=0; i < rows; i++){
         std::cout << "[";
@@ -44,6 +52,7 @@ void matrix_print(const int* const* m, std::size_t rows, std::size_t cols){
 }
 
 int* matrix_spiral_read(const int* const* m, std::size_t rows, std::size_t cols, std::size_t& out_size){
+    if (m == nullptr) return nullptr;
     out_size = rows*cols;
     int* res = new int[out_size];
     std::size_t left=0, right=cols, up=0, down=rows, size = 0;
